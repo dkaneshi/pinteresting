@@ -2,10 +2,12 @@
 <h1>Welcome to my app!</h1>
 <% if user_signed_in? %>
    <p>Member area</p>
+   <p><%= link_to "Pins", pins_path, class: "btn btn-primary btn-lg" %></p>
 <% else %>
 <p>
    <%=link_to "Sign in", new_user_session_path, class: "btn btn-default btn-lg" %> 
    <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
 </p>
+<p><%= link_to "Guest area", pins_path, class: "btn btn-default" %></p>
 <% end %>
 </div>
